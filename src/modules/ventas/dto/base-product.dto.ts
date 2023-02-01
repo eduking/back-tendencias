@@ -19,13 +19,13 @@ export class BaseProductDto {
 
   @IsNotEmpty(IsNotEmptyValidationOptions())
   @IsNumber(IsNotEmptyValidationOptions())
-  readonly precio:number;
+  readonly price:number;
 
 
 
   @IsNotEmpty(IsNotEmptyValidationOptions())
   @IsString(IsStringValidationOptions())
-  readonly descripcion:string;
+  readonly description:string;
 
 
   @IsnotEmpty(isNotEmptyValidationOptions ())
