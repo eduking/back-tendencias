@@ -17,9 +17,4 @@ export class ReadProductDto extends BaseProductDto {
   @Expose()
   readonly description;
 
-  @Expose()
-  readonly sort;
-
-  @Expose()
-  readonly isEnable;
 }

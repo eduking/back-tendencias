@@ -6,23 +6,29 @@ import {
   IsPositive,
   IsBoolean,
 } from 'class-validator';
+
+
 import { isNotEmptyValidationOptions } from '@shared/validation';
 
 export class BaseProductDto {
-  @Allow()
-  readonly categoryId: CategoryEntity;
+  @IsNotEmpty(IsNotEmptyValidationOptions())
+  @IsString(IsStringValidationOptions())
+  readonly title:string;
 
-  @IsNotEmpty(isNotEmptyValidationOptions())
-  @isString(IsStringValidatonOptions())
-  readonly title: string;
 
-  @IsNotEmpty(isNotEmptyValidationOptions())
-  readonly price: number;
 
-  @IsNotEmpty(isNotEmptyValidationOptions())
-  @isString(IsStringValidatonOptions())
-  readonly image: string;
+  @IsNotEmpty(IsNotEmptyValidationOptions())
+  @IsNumber(IsNotEmptyValidationOptions())
+  readonly precio:number;
 
-  @IsNotEmpty(isNotEmptyValidationOptions())
-  readonly category: number;
+
+
+  @IsNotEmpty(IsNotEmptyValidationOptions())
+  @IsString(IsStringValidationOptions())
+  readonly descripcion:string;
+
+
+  @IsnotEmpty(isNotEmptyValidationOptions ())
+  @IsString(ArrayNotEmptyValidationOptions())
+  readonly imagen:string[];
 }

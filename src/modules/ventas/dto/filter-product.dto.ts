@@ -1,5 +1,8 @@
-export class FilterProductDto extends PaginationDto {
-  @IsOptional()
-  @IsNumber()
-  readonly sort: number;
+export class FilterProductoDto extends PaginationDto{
+  @isOptional()
+  @IsString(IsStringValidationOptions())
+  readonly title;
+  
+
+
 }
